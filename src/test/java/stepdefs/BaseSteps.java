@@ -100,6 +100,12 @@ public class BaseSteps {
         scrollToElement(element);
     }
 
+    //Bu metod String seklinde yazilmis bir locatorun %s kismindaki textini degistirip
+    // xpath olarak geri döndürür.
+    public By xpath(String locator, String... text) {
+        return By.xpath(String.format(locator, text));
+    }
+
     public void waitForVisibility(WebElement element) {
         wait.until(ExpectedConditions.visibilityOf(element));
     }
@@ -119,4 +125,7 @@ public class BaseSteps {
     public void waitForPresence(By locator) {
         wait.until(ExpectedConditions.presenceOfElementLocated(locator));
     }
+
+
+    
 }
