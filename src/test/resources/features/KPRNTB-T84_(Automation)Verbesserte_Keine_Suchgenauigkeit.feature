@@ -1,6 +1,6 @@
 Feature : KPRNTB-136 Verbesserte Suchgenauigkeit
 
-  Scenario : Verbesserte keine Suchgenauigkeit
+  Scenario : (Automation)Verbesserte keine Suchgenauigkeit
     Given Ich gehe die Webseite Amazon-Homepage amazon.de
     Then Ich sehe title Amazon.de
     And Ich gehe das Dropdown-Menü Alle neben der Suchfeld
@@ -17,6 +17,6 @@ Feature : KPRNTB-136 Verbesserte Suchgenauigkeit
     And Ich sehe oben links auf der Seite Seitenzahl der Seiten mehr als Ergebnissen oder Produktmenge Vorschlägen für gesuchtes Produkt
     Then Ich sehe unter der Ergebnisse Titel die Fotos, Verfügbarkeit, Beschreibungen und Kundenrezensionen
     When Ich schreibe in das Suchfeld Schrauben
-    Then Ich drücke die Enter-Taste auf der Tastatur
+    Then Ich klicke auf die Suchschaltfläche
     And Ich sehe das Dropdown-Menü Alle neben der Suchfeld
     Then Ich sehe unter der Ergebnisse Titel die Fotos, Verfügbarkeit, Beschreibungen und Kundenrezensionen
