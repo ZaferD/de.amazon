@@ -8,10 +8,10 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 
 
-public class KeineSuchgenauigkeit {
+public class KeineSuchgenauigkeitPage {
 
 
-    public KeineSuchgenauigkeit() {
+    public KeineSuchgenauigkeitPage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
@@ -34,6 +34,11 @@ public class KeineSuchgenauigkeit {
 
     @FindBy(xpath = "//input[@id='twotabsearchtextbox']")
     public WebElement searchboxAmazon;
+    @FindBy(xpath = "//div[@data-component-type='s-search-result']")
+    public List <WebElement> searchErgebnisse;
+    @FindBy(xpath = "//h1[@class='a-size-base s-desktop-toolbar a-text-normal']")
+    public WebElement searchErgebnisBar;
+
 
 }
 

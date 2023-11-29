@@ -5,24 +5,22 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import pageObjects.HomePage;
-import pageObjects.KeineSuchgenauigkeit;
+import pageObjects.KeineSuchgenauigkeitPage;
 import utils.PropertyReader;
 import utils.Utilities;
 
 public class KeineSuchgenaukeit_Steps extends BaseSteps {
     HomePage homepage = new HomePage();
-    KeineSuchgenauigkeit keineSuchgenauigkeit = new KeineSuchgenauigkeit();
+    KeineSuchgenauigkeitPage keineSuchgenauigkeit = new KeineSuchgenauigkeitPage();
 
     @Given("ich gehe die Webseite Amazon-Homepage amazon.de")
     public void ichGeheDieWebseiteAmazonHomepageAmazonDe() {
         homepage = new HomePage();
-        keineSuchgenauigkeit = new KeineSuchgenauigkeit();
+        keineSuchgenauigkeit = new KeineSuchgenauigkeitPage();
         driver.get(PropertyReader.read("Config").get("url"));
     }
 
@@ -49,18 +47,16 @@ public class KeineSuchgenaukeit_Steps extends BaseSteps {
     public void ichSeheDasDropdownMenüDieKategorienMitDemTitelAlleEnthalten() {
 
         Select select = new Select(keineSuchgenauigkeit.dropdownBox);
-
         select.selectByVisibleText("Baby");
-
         String actualChooseOption = select.getFirstSelectedOption().getText();
         String expectedChooseOption = "Baby";
-
         Assert.assertEquals(expectedChooseOption, actualChooseOption);
 
     }
 
     @Then("ich klicke auf die Kategorie Baby im Dropdown-Menü")
     public void ichKlickeAufDieKategorieBabyImDropdownMenü() {
+
         click(keineSuchgenauigkeit.dropdownBaby);
     }
 
@@ -72,13 +68,14 @@ public class KeineSuchgenaukeit_Steps extends BaseSteps {
 
     @Then("ich sehe das Suchfeld")
     public void ichSeheDasSuchfeld() {
+
         waitForVisibility(keineSuchgenauigkeit.searchboxAmazon);
     }
 
     @And("ich schreibe in das Suchfeld Schnuller")
     public void ichSchreibeInDasSuchfeldSchnuller() {
         sendKeys(keineSuchgenauigkeit.searchboxAmazon, "Schnuller");
-        Utilities.sleep(3000);
+
     }
 
     @And("ich sehe in das Suchfeld ein Dropdown-Menü mit Schnuller Optionen")
@@ -91,26 +88,42 @@ public class KeineSuchgenaukeit_Steps extends BaseSteps {
 
     @Then("ich klicke auf ein gesuchtes Produkt im Dropdown-Menü")
     public void ichKlickeAufEinGesuchtesProduktImDropdownMenü() {
-        sendKeys(keineSuchgenauigkeit.searchboxAmazon, Keys.ENTER);
-
-
+            Utilities.sleep(4000);
+            //
+            //for (WebElement each : keineSuchgenauigkeit.dropdownMenus
+            //) {
+            //    System.out.println(each.getText());
+            //}
+        waitForInvisibility(keineSuchgenauigkeit.dropdownMenus.get(1).getText());
+        String selectChooseOptionSecond = keineSuchgenauigkeit.dropdownMenus.get(1).getText();
+        keineSuchgenauigkeit.searchboxAmazon.clear();
+        keineSuchgenauigkeit.searchboxAmazon.sendKeys(selectChooseOptionSecond, Keys.ENTER);
+        Utilities.sleep(4000);
     }
 
     @And("ich sehe die Produkten unter der Ergebnisse Title auf der Seite")
     public void ichSeheDieProduktenUnterDerErgebnisseTitleAufDerSeite() {
+        long num = keineSuchgenauigkeit.searchErgebnisse.size();
+        Assert.assertTrue(num>0);
 
     }
 
     @And("ich sehe oben links auf der Seite Seitenzahl der Seiten mehr als Ergebnissen oder Produktmenge Vorschlägen für gesuchtes Produkt")
     public void ichSeheObenLinksAufDerSeiteSeitenzahlDerSeitenMehrAlsErgebnissenOderProduktmengeVorschlägenFürGesuchtesProdukt() {
+        String expected=keineSuchgenauigkeit.searchboxAmazon.getText();
+        String actual=keineSuchgenauigkeit.searchErgebnisBar.getText();
+        Assert.assertTrue(expected.contains(actual));
+
     }
 
     @Then("ich sehe unter der Ergebnisse Titel die Fotos, Verfügbarkeit, Beschreibungen und Kundenrezensionen")
     public void ichSeheUnterDerErgebnisseTitelDieFotosVerfügbarkeitBeschreibungenUndKundenrezensionen() {
+
     }
 
     @When("ich schreibe in das Suchfeld Schrauben")
     public void ichSchreibeInDasSuchfeldSchrauben() {
+
     }
 
     @Then("ich klicke auf die Suchschaltfläche")
