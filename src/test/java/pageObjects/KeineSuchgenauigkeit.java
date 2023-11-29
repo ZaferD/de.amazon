@@ -16,8 +16,9 @@ public class KeineSuchgenauigkeit {
     @FindBy(xpath = "//title[text()='Amazon.de: Günstige Preise für Elektronik & Foto, Filme, Musik, Bücher, Games, Spielzeug & mehr'")
     WebElement homepageAmazon;
 
-    @FindBy(xpath = "//div[@id='nav-search-dropdown-card'] //span[text()='Alle']")
+    @FindBy(xpath = "//div[@id='nav-search-dropdown-card']")
     public WebElement dropdownAlle;
+
 
     @FindBy(xpath = "//span[@id='nav-search-label-id' and text()='Baby']")
     public WebElement dropdownBaby;
