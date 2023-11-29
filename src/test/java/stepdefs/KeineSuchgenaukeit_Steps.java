@@ -94,7 +94,7 @@ public class KeineSuchgenaukeit_Steps extends BaseSteps {
             //) {
             //    System.out.println(each.getText());
             //}
-        waitForInvisibility(keineSuchgenauigkeit.dropdownMenus.get(1).getText());
+
         String selectChooseOptionSecond = keineSuchgenauigkeit.dropdownMenus.get(1).getText();
         keineSuchgenauigkeit.searchboxAmazon.clear();
         keineSuchgenauigkeit.searchboxAmazon.sendKeys(selectChooseOptionSecond, Keys.ENTER);
