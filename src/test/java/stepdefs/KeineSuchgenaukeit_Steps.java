@@ -5,15 +5,19 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import pageObjects.HomePage;
 import pageObjects.KeineSuchgenauigkeit;
 import utils.PropertyReader;
+import utils.Utilities;
 
-public class KeineSuchgenaukeit_Steps extends BaseSteps{
-    HomePage homepage=new HomePage();
-    KeineSuchgenauigkeit keineSuchgenauigkeit=new KeineSuchgenauigkeit();
+public class KeineSuchgenaukeit_Steps extends BaseSteps {
+    HomePage homepage = new HomePage();
+    KeineSuchgenauigkeit keineSuchgenauigkeit = new KeineSuchgenauigkeit();
 
     @Given("ich gehe die Webseite Amazon-Homepage amazon.de")
     public void ichGeheDieWebseiteAmazonHomepageAmazonDe() {
@@ -44,7 +48,7 @@ public class KeineSuchgenaukeit_Steps extends BaseSteps{
     @When("ich sehe das Dropdown-Menü die Kategorien mit dem Titel Alle enthalten")
     public void ichSeheDasDropdownMenüDieKategorienMitDemTitelAlleEnthalten() {
 
-        Select select = new Select(keineSuchgenauigkeit.dropdownAlle);
+        Select select = new Select(keineSuchgenauigkeit.dropdownBox);
 
         select.selectByVisibleText("Baby");
 
@@ -62,26 +66,39 @@ public class KeineSuchgenaukeit_Steps extends BaseSteps{
 
     @And("ich sehe das Dropdown-Menü zu")
     public void ichSeheDasDropdownMenüZu() {
+        waitForInvisibility(keineSuchgenauigkeit.dropdownAlle);
+
     }
 
-    @Then("ich sehe der Cursor im Suchfeld")
-    public void ichSeheDerCursorImSuchfeld() {
+    @Then("ich sehe das Suchfeld")
+    public void ichSeheDasSuchfeld() {
+        waitForVisibility(keineSuchgenauigkeit.searchboxAmazon);
     }
 
     @And("ich schreibe in das Suchfeld Schnuller")
     public void ichSchreibeInDasSuchfeldSchnuller() {
+        sendKeys(keineSuchgenauigkeit.searchboxAmazon, "Schnuller");
+        Utilities.sleep(3000);
     }
 
     @And("ich sehe in das Suchfeld ein Dropdown-Menü mit Schnuller Optionen")
     public void ichSeheInDasSuchfeldEinDropdownMenüMitSchnullerOptionen() {
+
+        long num = keineSuchgenauigkeit.dropdownMenus.stream().filter(e -> !e.getText().toLowerCase().contains("schnuller")).count();
+        Assert.assertEquals(num, 0);
+
     }
 
     @Then("ich klicke auf ein gesuchtes Produkt im Dropdown-Menü")
     public void ichKlickeAufEinGesuchtesProduktImDropdownMenü() {
+        sendKeys(keineSuchgenauigkeit.searchboxAmazon, Keys.ENTER);
+
+
     }
 
     @And("ich sehe die Produkten unter der Ergebnisse Title auf der Seite")
     public void ichSeheDieProduktenUnterDerErgebnisseTitleAufDerSeite() {
+
     }
 
     @And("ich sehe oben links auf der Seite Seitenzahl der Seiten mehr als Ergebnissen oder Produktmenge Vorschlägen für gesuchtes Produkt")
@@ -102,5 +119,10 @@ public class KeineSuchgenaukeit_Steps extends BaseSteps{
 
     @And("ich sehe das Dropdown-Menü Alle neben der Suchfeld")
     public void ichSeheDasDropdownMenüAlleNebenDerSuchfeld() {
+    }
+
+    @And("ich klicke Cookies akzeptieren")
+    public void ichKlickeCookiesAkzeptieren() {
+        click(keineSuchgenauigkeit.cookiesAccept);
     }
 }

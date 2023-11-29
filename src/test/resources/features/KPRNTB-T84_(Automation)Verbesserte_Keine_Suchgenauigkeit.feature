@@ -1,14 +1,16 @@
 Feature: KPRNTB-136 Verbesserte Suchgenauigkeit
-@wip
+
+  @wip
   Scenario: (Automation)Verbesserte keine Suchgenauigkeit
     Given ich gehe die Webseite Amazon-Homepage amazon.de
     Then ich sehe title Amazon.de
+    And ich klicke Cookies akzeptieren
     And ich gehe das Dropdown-Menü Alle neben der Suchfeld
     Then ich klicke Alle Dropdown-Menü
     When ich sehe das Dropdown-Menü die Kategorien mit dem Titel Alle enthalten
     Then ich klicke auf die Kategorie Baby im Dropdown-Menü
     And ich sehe das Dropdown-Menü zu
-    Then ich sehe der Cursor im Suchfeld
+    Then ich sehe das Suchfeld
     And ich schreibe in das Suchfeld Schnuller
     And ich sehe in das Suchfeld ein Dropdown-Menü mit Schnuller Optionen
     Then ich klicke auf ein gesuchtes Produkt im Dropdown-Menü
