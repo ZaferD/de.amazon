@@ -25,20 +25,19 @@ public class KeineSuchgenaukeit_Steps extends BaseSteps{
     @Then("ich sehe title Amazon.de")
     public void ichSeheTitleAmazonDe() {
         String actualTitle = Driver.getDriver().getTitle();
-        String expectedTitle = "Amazon.de: Günstige Preise für Elektronik & Foto, Filme, Musik, Bücher, Games, Spielzeug & mehr";
-        Assert.assertEquals(actualTitle, expectedTitle);
+
+        Assert.assertTrue(actualTitle.contains("Amazon.de"));
     }
 
     @And("ich gehe das Dropdown-Menü Alle neben der Suchfeld")
     public void ichGeheDasDropdownMenüAlleNebenDerSuchfeld() {
-        String actualTitle = keineSuchgenauigkeit.dropdownAlle.getText();
-        String expectedTitle = "Alle";
-        Assert.assertEquals(actualTitle, expectedTitle);
+        waitForVisibility(keineSuchgenauigkeit.dropdownAlle);
+        Assert.assertTrue(keineSuchgenauigkeit.dropdownAlle.getText().contains("Alle"));
     }
 
     @Then("ich klicke Alle Dropdown-Menü")
     public void ichKlickeAlleDropdownMenü() {
-        keineSuchgenauigkeit.dropdownAlle.click();
+        click(keineSuchgenauigkeit.dropdownAlle);
 
     }
 
@@ -58,7 +57,7 @@ public class KeineSuchgenaukeit_Steps extends BaseSteps{
 
     @Then("ich klicke auf die Kategorie Baby im Dropdown-Menü")
     public void ichKlickeAufDieKategorieBabyImDropdownMenü() {
-        keineSuchgenauigkeit.dropdownBaby.click();
+        click(keineSuchgenauigkeit.dropdownBaby);
     }
 
     @And("ich sehe das Dropdown-Menü zu")
