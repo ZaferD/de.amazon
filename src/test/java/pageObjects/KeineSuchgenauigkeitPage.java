@@ -44,6 +44,8 @@ public class KeineSuchgenauigkeitPage {
 
     @FindBy(xpath = "//input[@id='nav-search-submit-button']")
     public WebElement suchButton;
+    @FindBy(xpath = "//span[@class='a-size-base-plus a-color-base a-text-normal']")
+    public WebElement ergebnisseGesuchteProdukt;
 
 
 }

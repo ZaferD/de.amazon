@@ -124,10 +124,6 @@ public class KeineSuchgenaukeit_Steps extends BaseSteps {
 
     }
 
-    @Then("ich sehe unter der Ergebnisse Titel die Fotos, Verfügbarkeit, Beschreibungen und Kundenrezensionen")
-    public void ichSeheUnterDerErgebnisseTitelDieFotosVerfügbarkeitBeschreibungenUndKundenrezensionen() {
-
-    }
 
     @When("ich schreibe in das Suchfeld Schrauben")
     public void ichSchreibeInDasSuchfeldSchrauben() {
@@ -148,5 +144,21 @@ public class KeineSuchgenaukeit_Steps extends BaseSteps {
         Assert.assertTrue(keineSuchgenauigkeit.dropdownAlle.getText().contains("Alle"));
     }
 
+    @Then("ich sehe die Ergebnisse für Schnuller gesuchte Produkt unter dem Ergebnisse")
+    public void ichSeheDieErgebnisseFürSchnullerGesuchteProduktUnterDemErgebnisse() {
+        String actualText = keineSuchgenauigkeit.ergebnisseGesuchteProdukt.getText();
+        String expectedText = "Schnuller";
+        System.out.println("expectedText : " + expectedText + " " + " actualText : " + actualText);
 
+        Assert.assertTrue(actualText.toLowerCase().contains(expectedText.toLowerCase()));
+    }
+
+    @Then("ich sehe die Ergebnisse für Schrauben gesuchte Produkt unter dem Ergebnisse")
+    public void ichSeheDieErgebnisseFürSchraubenGesuchteProduktUnterDemErgebnisse() {
+        String actualText = keineSuchgenauigkeit.ergebnisseGesuchteProdukt.getText();
+        String expectedText = "Schrauben";
+        System.out.println("expectedText : " + expectedText + " " + " actualText : " + actualText);
+
+        Assert.assertTrue(actualText.toLowerCase().contains(expectedText.toLowerCase()));
+    }
 }

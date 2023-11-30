@@ -17,8 +17,8 @@ Feature: KPRNTB-136 Verbesserte Suchgenauigkeit
     And ich sehe das Dropdown-Menü zu
     And ich sehe die Produkten unter der Ergebnisse Title auf der Seite
     And ich sehe oben links auf der Seite Seitenzahl der Seiten mehr als Ergebnissen oder Produktmenge Vorschlägen für gesuchtes Produkt
-    Then ich sehe unter der Ergebnisse Titel die Fotos, Verfügbarkeit, Beschreibungen und Kundenrezensionen
+    Then ich sehe die Ergebnisse für Schnuller gesuchte Produkt unter dem Ergebnisse
     When ich schreibe in das Suchfeld Schrauben
     Then ich klicke auf die Suchschaltfläche
     And ich sehe das Dropdown-Menü Alle neben der Suchfeld
-    Then ich sehe unter der Ergebnisse Titel die Fotos, Verfügbarkeit, Beschreibungen und Kundenrezensionen
+    Then ich sehe die Ergebnisse für Schrauben gesuchte Produkt unter dem Ergebnisse
