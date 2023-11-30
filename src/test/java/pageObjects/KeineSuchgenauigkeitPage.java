@@ -34,10 +34,16 @@ public class KeineSuchgenauigkeitPage {
 
     @FindBy(xpath = "//input[@id='twotabsearchtextbox']")
     public WebElement searchboxAmazon;
+
     @FindBy(xpath = "//div[@data-component-type='s-search-result']")
-    public List <WebElement> searchErgebnisse;
-    @FindBy(xpath = "//h1[@class='a-size-base s-desktop-toolbar a-text-normal']")
+    public List<WebElement> searchErgebnisse;
+
+    @FindBy(xpath = "(//div[@class='a-section a-spacing-small a-spacing-top-small']/span)[3]")
+    //@FindBy(xpath = "//h1[@class='a-size-base s-desktop-toolbar a-text-normal']")
     public WebElement searchErgebnisBar;
+
+    @FindBy(xpath = "//input[@id='nav-search-submit-button']")
+    public WebElement suchButton;
 
 
 }

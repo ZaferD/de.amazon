@@ -10,8 +10,8 @@ import org.openqa.selenium.TakesScreenshot;
 public class Hooks {
 
     @AfterStep
-    public void afterStep(Scenario scenario){
-        if (scenario.isFailed()){
+    public void afterStep(Scenario scenario) {
+        if (scenario.isFailed()) {
             byte[] screenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
             scenario.attach(screenshot, "image/png", scenario.getName());
         }
@@ -20,6 +20,6 @@ public class Hooks {
     @After(order = 0)
     public void after() {
 
-//        Driver.quitDriver();
+        Driver.quitDriver();
     }
 }

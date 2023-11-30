@@ -31,6 +31,12 @@ public class KeineSuchgenaukeit_Steps extends BaseSteps {
         Assert.assertTrue(actualTitle.contains("Amazon.de"));
     }
 
+    @And("ich klicke Cookies akzeptieren")
+    public void ichKlickeCookiesAkzeptieren() {
+
+        click(keineSuchgenauigkeit.cookiesAccept);
+    }
+
     @And("ich gehe das Dropdown-Menü Alle neben der Suchfeld")
     public void ichGeheDasDropdownMenüAlleNebenDerSuchfeld() {
         waitForVisibility(keineSuchgenauigkeit.dropdownAlle);
@@ -88,31 +94,33 @@ public class KeineSuchgenaukeit_Steps extends BaseSteps {
 
     @Then("ich klicke auf ein gesuchtes Produkt im Dropdown-Menü")
     public void ichKlickeAufEinGesuchtesProduktImDropdownMenü() {
-            Utilities.sleep(4000);
-            //
-            //for (WebElement each : keineSuchgenauigkeit.dropdownMenus
-            //) {
-            //    System.out.println(each.getText());
-            //}
+        Utilities.sleep(4000);
+        //
+        //for (WebElement each : keineSuchgenauigkeit.dropdownMenus
+        //) {
+        //    System.out.println(each.getText());
+        //}
 
         String selectChooseOptionSecond = keineSuchgenauigkeit.dropdownMenus.get(1).getText();
         keineSuchgenauigkeit.searchboxAmazon.clear();
         keineSuchgenauigkeit.searchboxAmazon.sendKeys(selectChooseOptionSecond, Keys.ENTER);
-        Utilities.sleep(4000);
+
     }
 
     @And("ich sehe die Produkten unter der Ergebnisse Title auf der Seite")
     public void ichSeheDieProduktenUnterDerErgebnisseTitleAufDerSeite() {
         long num = keineSuchgenauigkeit.searchErgebnisse.size();
-        Assert.assertTrue(num>0);
+        Assert.assertTrue(num > 0);
 
     }
 
     @And("ich sehe oben links auf der Seite Seitenzahl der Seiten mehr als Ergebnissen oder Produktmenge Vorschlägen für gesuchtes Produkt")
     public void ichSeheObenLinksAufDerSeiteSeitenzahlDerSeitenMehrAlsErgebnissenOderProduktmengeVorschlägenFürGesuchtesProdukt() {
-        String expected=keineSuchgenauigkeit.searchboxAmazon.getText();
-        String actual=keineSuchgenauigkeit.searchErgebnisBar.getText();
-        Assert.assertTrue(expected.contains(actual));
+
+        String actualText = keineSuchgenauigkeit.searchboxAmazon.getAttribute("value");
+        String expectedText = keineSuchgenauigkeit.searchErgebnisBar.getText();
+        System.out.println("expectedText : " + expectedText + " " + " actualText : " + actualText);
+        Assert.assertTrue(expectedText.contains(actualText));
 
     }
 
@@ -123,19 +131,22 @@ public class KeineSuchgenaukeit_Steps extends BaseSteps {
 
     @When("ich schreibe in das Suchfeld Schrauben")
     public void ichSchreibeInDasSuchfeldSchrauben() {
-
+        keineSuchgenauigkeit.searchboxAmazon.clear();
+        sendKeys(keineSuchgenauigkeit.searchboxAmazon, "Schrauben");
+        Utilities.sleep(4000);
     }
 
     @Then("ich klicke auf die Suchschaltfläche")
     public void ichKlickeAufDieSuchschaltfläche() {
+        click(keineSuchgenauigkeit.suchButton);
+        Utilities.sleep(4000);
     }
 
     @And("ich sehe das Dropdown-Menü Alle neben der Suchfeld")
     public void ichSeheDasDropdownMenüAlleNebenDerSuchfeld() {
+        waitForVisibility(keineSuchgenauigkeit.dropdownAlle);
+        Assert.assertTrue(keineSuchgenauigkeit.dropdownAlle.getText().contains("Alle"));
     }
 
-    @And("ich klicke Cookies akzeptieren")
-    public void ichKlickeCookiesAkzeptieren() {
-        click(keineSuchgenauigkeit.cookiesAccept);
-    }
+
 }
