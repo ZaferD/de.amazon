@@ -2,8 +2,10 @@ package utils;
 
 import driver.Driver;
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebElement;
 
 import java.io.File;
 import java.io.IOException;
@@ -34,6 +36,12 @@ public class Utilities {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+    //Stale element sorununu çözmek için....
+    public WebElement relocateStaleElement(WebElement element, By by){
+
+        return element = Driver.getDriver().findElement(by);
+
     }
 
     /**

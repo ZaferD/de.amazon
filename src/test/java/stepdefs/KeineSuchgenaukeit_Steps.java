@@ -5,6 +5,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
@@ -86,8 +87,8 @@ public class KeineSuchgenaukeit_Steps extends BaseSteps {
 
     @And("ich sehe in das Suchfeld ein Dropdown-Menü mit Schnuller Optionen")
     public void ichSeheInDasSuchfeldEinDropdownMenüMitSchnullerOptionen() {
-
-        long num = keineSuchgenauigkeit.dropdownMenus.stream().filter(e -> !e.getText().toLowerCase().contains("schnuller")).count();
+        Utilities.sleep(3000);
+        long num = driver.findElements(By.xpath("//div[@class='s-suggestion-container']")).stream().filter(e -> !e.getText().toLowerCase().contains("schnuller")).count();
         Assert.assertEquals(num, 0);
 
     }
@@ -101,9 +102,9 @@ public class KeineSuchgenaukeit_Steps extends BaseSteps {
         //    System.out.println(each.getText());
         //}
 
-        String selectChooseOptionSecond = keineSuchgenauigkeit.dropdownMenus.get(1).getText();
-        keineSuchgenauigkeit.searchboxAmazon.clear();
-        keineSuchgenauigkeit.searchboxAmazon.sendKeys(selectChooseOptionSecond, Keys.ENTER);
+        keineSuchgenauigkeit.dropdownMenus.get(0).click();
+//        keineSuchgenauigkeit.searchboxAmazon.clear();
+//        keineSuchgenauigkeit.searchboxAmazon.sendKeys(selectChooseOptionSecond, Keys.ENTER);
 
     }
 

@@ -14,6 +14,7 @@ Feature: KPRNTB-136 Verbesserte Suchgenauigkeit
     And ich schreibe in das Suchfeld Schnuller
     And ich sehe in das Suchfeld ein Dropdown-Menü mit Schnuller Optionen
     Then ich klicke auf ein gesuchtes Produkt im Dropdown-Menü
+    #//ein gesuchtes erst gesuchtes zweite....
     And ich sehe das Dropdown-Menü zu
     And ich sehe die Produkten unter der Ergebnisse Title auf der Seite
     And ich sehe oben links auf der Seite Seitenzahl der Seiten mehr als Ergebnissen oder Produktmenge Vorschlägen für gesuchtes Produkt
