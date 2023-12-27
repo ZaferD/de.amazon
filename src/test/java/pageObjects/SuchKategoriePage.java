@@ -29,7 +29,8 @@ public class SuchKategoriePage {
     public WebElement titleVorgestellteKategorien;
     @FindBy(xpath = "//li[@class='octopus-pc-category-card-v2-item'][1]")
     public WebElement ersteVorgestellteKategorien;
-    @FindBy(xpath = "//div[@class='a-section octopus-pc-category-card-v2-subcategory-title'][1]")
+    @FindBy(xpath = "//span[@class='a-size-base a-color-base' and text()='Vegetarische & vegane Küche']")
+    //@FindBy(xpath = "(//div[@class='a-section octopus-pc-category-card-v2-subcategory-title'])[1]")
     public WebElement listErsteVorgestellteKategorien;
     @FindBy(xpath = "//span[@class='a-size-base a-color-base a-text-bold' and text()='Sprache']")
     public WebElement titleSprache;
@@ -41,11 +42,11 @@ public class SuchKategoriePage {
     public WebElement titleErgebnisse;
     @FindBy(xpath = "//span[@class='a-size-base a-color-base puis-bold-weight-text' and text()='Format']")
     public WebElement titleFormat;
-    @FindBy(xpath = "(//input[@type='checkbox'])[26]")
+    @FindBy(xpath = "//*[@aria-label='Hörbuch']/span/a/div/label/input")
     public WebElement checkboxHoerbuch;
     @FindBy(xpath = "//span[@class='a-size-base a-color-base puis-bold-weight-text' and text()='Kundenrezensionen']")
     public WebElement titleKundenrezensionen;
-    @FindBy(xpath = "//i[@class='a-icon a-icon-star-medium a-star-medium-4']")
+    @FindBy(xpath = "//section[@aria-label='4 Sterne und mehr']")
     public WebElement titleVierSterneUndMehr;
 
 
