@@ -49,7 +49,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Ara 4, 2023 09:35:36 ÖÖ</span>
+			<span class='label blue darken-3 suite-start-time'>Dez. 27, 2023 02:08:24 AM</span>
 			</a>
 		</ul>
 	</div>
@@ -157,7 +157,7 @@
                 </div>
                 <div class='block text-small'>
                     <span class='tooltipped' data-position='top' data-tooltip='100%'>
-                    <span class='strong'>22</span> steps passed</span>
+                    <span class='strong'>26</span> steps passed</span>
                 </div>
                 <div class='block text-small'>
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
@@ -186,8 +186,8 @@
 			<ul id='test-collection' class='test-collection'>
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>KPRNTB-136 Verbesserte Suchgenauigkeit</span>
-						<span class='test-time'>Ara 4, 2023 09:35:37 ÖÖ</span>
+						<span class='test-name'>KPRNTB-139 Erweiterung Suchkategorie</span>
+						<span class='test-time'>Dez. 27, 2023 02:08:24 AM</span>
 						<span class='test-status right pass'>Pass</span>
 					</div>
 					<div class='test-content hide'>
@@ -200,9 +200,9 @@
 
 <div class='scenario node' test-id='2' status='pass'>
 
-	<span class='duration right label'>00 00 47.107</span>
+	<span class='duration right label'>00 01 04.212</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: (Automation)Verbesserte keine Suchgenauigkeit</div>
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: (Automation) Die Funktionalität der Kategorie "Bücher"</div>
 	</div>
 	
 	
@@ -212,116 +212,132 @@
 	
 	<ul class='steps'>
 		<li test-id='3' class='node given Pass' status='Pass'>
-			<div class="step-name" title="(stepdefs.KeineSuchgenaukeit_Steps.ichGeheDieWebseiteAmazonHomepageAmazonDe())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given ich gehe die Webseite Amazon-Homepage amazon.de</div>
+			<div class="step-name" title="(stepdefs.SuchKategorieSteps.ichGeheAufDieWebseiteAmazonHomepageAmazonDe())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given ich gehe auf die Webseite Amazon-Homepage amazon.de</div>
 
 
 		</li>
 		<li test-id='5' class='node then Pass' status='Pass'>
-			<div class="step-name" title="(stepdefs.KeineSuchgenaukeit_Steps.ichSeheTitleAmazonDe())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then ich sehe title Amazon.de</div>
+			<div class="step-name" title="(stepdefs.SuchKategorieSteps.ichSeheDenTitelAufAmazonDe())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Ich sehe den Titel auf Amazon.de.</div>
 
 
 		</li>
 		<li test-id='7' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(stepdefs.KeineSuchgenaukeit_Steps.ichKlickeCookiesAkzeptieren())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And ich klicke Cookies akzeptieren</div>
+			<div class="step-name" title="(stepdefs.SuchKategorieSteps.ichKlickeAufCookiesAkzeptieren())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And ich klicke auf Cookies akzeptieren</div>
 
 
 		</li>
-		<li test-id='9' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(stepdefs.KeineSuchgenaukeit_Steps.ichGeheDasDropdownMenüAlleNebenDerSuchfeld())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And ich gehe das Dropdown-Menü Alle neben der Suchfeld</div>
+		<li test-id='9' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepdefs.SuchKategorieSteps.ichSeheDenTextAlleObenLinksAufDerSeiteUnterAmazonDeLogo())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then ich sehe den Text Alle, oben links auf der Seite, unter amazon.de Logo</div>
 
 
 		</li>
-		<li test-id='11' class='node then Pass' status='Pass'>
-			<div class="step-name" title="(stepdefs.KeineSuchgenaukeit_Steps.ichKlickeAlleDropdownMenü())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then ich klicke Alle Dropdown-Menü</div>
+		<li test-id='11' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepdefs.SuchKategorieSteps.ichKlickeAufDenTextAlle())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And ich klicke auf den Text Alle</div>
 
 
 		</li>
-		<li test-id='13' class='node when Pass' status='Pass'>
-			<div class="step-name" title="(stepdefs.KeineSuchgenaukeit_Steps.ichSeheDasDropdownMenüDieKategorienMitDemTitelAlleEnthalten())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When ich sehe das Dropdown-Menü die Kategorien mit dem Titel Alle enthalten</div>
+		<li test-id='13' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepdefs.SuchKategorieSteps.ichSeheDenTitelAlleKategorien())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then ich sehe den Titel Alle Kategorien</div>
 
 
 		</li>
-		<li test-id='15' class='node then Pass' status='Pass'>
-			<div class="step-name" title="(stepdefs.KeineSuchgenaukeit_Steps.ichKlickeAufDieKategorieBabyImDropdownMenü())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then ich klicke auf die Kategorie Baby im Dropdown-Menü</div>
+		<li test-id='15' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepdefs.SuchKategorieSteps.ichSeheAufDieKategorieBücherInDerList())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And ich sehe auf die Kategorie Bücher in der List</div>
 
 
 		</li>
-		<li test-id='17' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(stepdefs.KeineSuchgenaukeit_Steps.ichSeheDasDropdownMenüZu())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And ich sehe das Dropdown-Menü zu</div>
+		<li test-id='17' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepdefs.SuchKategorieSteps.ichKlickeAufDieKategorieBücherInDerList())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then ich klicke auf die Kategorie Bücher in der List</div>
 
 
 		</li>
-		<li test-id='19' class='node then Pass' status='Pass'>
-			<div class="step-name" title="(stepdefs.KeineSuchgenaukeit_Steps.ichSeheDasSuchfeld())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then ich sehe das Suchfeld</div>
+		<li test-id='19' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepdefs.SuchKategorieSteps.ichSeheAlleBücherTitle())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And ich sehe Alle Bücher Title</div>
 
 
 		</li>
-		<li test-id='21' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(stepdefs.KeineSuchgenaukeit_Steps.ichSchreibeInDasSuchfeldSchnuller())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And ich schreibe in das Suchfeld Schnuller</div>
+		<li test-id='21' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepdefs.SuchKategorieSteps.ichKlickeAufAlleBücherText())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then ich klicke auf Alle Bücher Text</div>
 
 
 		</li>
 		<li test-id='23' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(stepdefs.KeineSuchgenaukeit_Steps.ichSeheInDasSuchfeldEinDropdownMenüMitSchnullerOptionen())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And ich sehe in das Suchfeld ein Dropdown-Menü mit Schnuller Optionen</div>
+			<div class="step-name" title="(stepdefs.SuchKategorieSteps.ichSeheDieListeDerKategorienUnterDemTitelStöbernLinksAufDerSeite())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And ich sehe die Liste der Kategorien unter dem Titel Stöbern links auf der Seite</div>
 
 
 		</li>
-		<li test-id='25' class='node then Pass' status='Pass'>
-			<div class="step-name" title="(stepdefs.KeineSuchgenaukeit_Steps.ichKlickeAufEinGesuchtesProduktImDropdownMenü())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then ich klicke auf ein gesuchtes Produkt im Dropdown-Menü</div>
+		<li test-id='25' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepdefs.SuchKategorieSteps.ichSeheAufDerSeiteVorgestellteKategorienTitel())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And ich sehe auf der Seite Vorgestellte Kategorien Titel</div>
 
 
 		</li>
 		<li test-id='27' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(stepdefs.KeineSuchgenaukeit_Steps.ichSeheDasDropdownMenüZu())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And ich sehe das Dropdown-Menü zu</div>
+			<div class="step-name" title="(stepdefs.SuchKategorieSteps.ichGeheErsteKategorieUnterVorgestellteKategorienTitel())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And ich gehe erste Kategorie unter Vorgestellte Kategorien Titel</div>
 
 
 		</li>
 		<li test-id='29' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(stepdefs.KeineSuchgenaukeit_Steps.ichSeheDieProduktenUnterDerErgebnisseTitleAufDerSeite())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And ich sehe die Produkten unter der Ergebnisse Title auf der Seite</div>
+			<div class="step-name" title="(stepdefs.SuchKategorieSteps.ichKlickeInDerSichÖffnendenKategorienlisteAufDieErsteKategorie())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And ich klicke in der sich öffnenden Kategorienliste auf die erste Kategorie</div>
 
 
 		</li>
-		<li test-id='31' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(stepdefs.KeineSuchgenaukeit_Steps.ichSeheObenLinksAufDerSeiteSeitenzahlDerSeitenMehrAlsErgebnissenOderProduktmengeVorschlägenFürGesuchtesProdukt())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And ich sehe oben links auf der Seite Seitenzahl der Seiten mehr als Ergebnissen oder Produktmenge Vorschlägen für gesuchtes Produkt</div>
+		<li test-id='31' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepdefs.SuchKategorieSteps.ichSeheDieSpracheTextInDerListeLinksAufDerSeite())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then ich sehe die Sprache Text in der Liste links auf der Seite</div>
 
 
 		</li>
-		<li test-id='33' class='node then Pass' status='Pass'>
-			<div class="step-name" title="(stepdefs.KeineSuchgenaukeit_Steps.ichSeheDieErgebnisseFürSchnullerGesuchteProduktUnterDemErgebnisse())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then ich sehe die Ergebnisse für Schnuller gesuchte Produkt unter dem Ergebnisse</div>
+		<li test-id='33' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepdefs.SuchKategorieSteps.ichKlickeAufDeutschCheckbox())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And ich klicke auf Deutsch Checkbox</div>
 
 
 		</li>
-		<li test-id='35' class='node when Pass' status='Pass'>
-			<div class="step-name" title="(stepdefs.KeineSuchgenaukeit_Steps.ichSchreibeInDasSuchfeldSchrauben())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When ich schreibe in das Suchfeld Schrauben</div>
+		<li test-id='35' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepdefs.SuchKategorieSteps.ichSeheObenLinksAufDerSeiteSeitenzahlDerSeitenVonMehrAlsErgebnissen())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then ich sehe oben links auf der Seite Seitenzahl der Seiten von mehr als Ergebnissen</div>
 
 
 		</li>
-		<li test-id='37' class='node then Pass' status='Pass'>
-			<div class="step-name" title="(stepdefs.KeineSuchgenaukeit_Steps.ichKlickeAufDieSuchschaltfläche())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then ich klicke auf die Suchschaltfläche</div>
+		<li test-id='37' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepdefs.SuchKategorieSteps.ichSeheDieErgebnisseTitleAufDerSeite())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And ich sehe die Ergebnisse Title auf der Seite</div>
 
 
 		</li>
-		<li test-id='39' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(stepdefs.KeineSuchgenaukeit_Steps.ichSeheDasDropdownMenüAlleNebenDerSuchfeld())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And ich sehe das Dropdown-Menü Alle neben der Suchfeld</div>
+		<li test-id='39' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepdefs.SuchKategorieSteps.ichSeheUnterFormatTextInDerListeLinksAufDerSeite())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then ich sehe unter Format Text in der Liste links auf der Seite</div>
 
 
 		</li>
-		<li test-id='40' class='node * Pass' status='Pass'>
-			<div class="step-name" title="(AFTER_STEP)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>stepdefs.Hooks.afterStep(io.cucumber.java.Scenario)</div>
-
-
-					<div class="node-step">(Automation)Verbesserte keine Suchgenauigkeit</div>
-					<div class='screenshots'>
-						<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../screenshots/embedded1.png' src='../screenshots/embedded1.png'>
-					</div>
-		</li>
-		<li test-id='41' class='node then Pass' status='Pass'>
-			<div class="step-name" title="(stepdefs.KeineSuchgenaukeit_Steps.ichSeheDieErgebnisseFürSchraubenGesuchteProduktUnterDemErgebnisse())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then ich sehe die Ergebnisse für Schrauben gesuchte Produkt unter dem Ergebnisse</div>
+		<li test-id='41' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepdefs.SuchKategorieSteps.ichKlickeHörbuchCheckbox())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And ich klicke Hörbuch Checkbox</div>
 
 
 		</li>
-		<li test-id='42' class='node * Pass' status='Pass'>
-			<div class="step-name" title="(AFTER_STEP)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>stepdefs.Hooks.afterStep(io.cucumber.java.Scenario)</div>
+		<li test-id='43' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepdefs.SuchKategorieSteps.ichSeheObenLinksAufDerSeiteSeitenzahlDerSeitenVonMehrAlsErgebnissen())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then ich sehe oben links auf der Seite Seitenzahl der Seiten von mehr als Ergebnissen</div>
+
+
+		</li>
+		<li test-id='45' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepdefs.SuchKategorieSteps.ichSeheDieErgebnisseTitleAufDerSeite())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And ich sehe die Ergebnisse Title auf der Seite</div>
+
+
+		</li>
+		<li test-id='47' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepdefs.SuchKategorieSteps.ichSeheUnterDerKundenrezensionenTextInDerListeLinksAufDerSeite())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then ich sehe unter der Kundenrezensionen Text in der Liste links auf der Seite</div>
+
+
+		</li>
+		<li test-id='49' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepdefs.SuchKategorieSteps.ichKlickeVierSterneMehr())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And ich klicke vier Sterne & mehr</div>
+
+
+		</li>
+		<li test-id='51' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepdefs.SuchKategorieSteps.ichSeheObenLinksAufDerSeiteSeitenzahlDerSeitenVonMehrAlsErgebnissen())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then ich sehe oben links auf der Seite Seitenzahl der Seiten von mehr als Ergebnissen</div>
+
+
+		</li>
+		<li test-id='53' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepdefs.SuchKategorieSteps.ichSeheDieErgebnisseTitleAufDerSeite())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And ich sehe die Ergebnisse Title auf der Seite</div>
 
 
 		</li>
@@ -393,8 +409,8 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Ara 4, 2023 09:35:37 ÖÖ</td>
-										<td class='linked' test-id='2'>(Automation)Verbesserte keine Suchgenauigkeit</td>
+										<td>Dez. 27, 2023 02:08:24 AM</td>
+										<td class='linked' test-id='2'>(Automation) Die Funktionalität der Kategorie "Bücher"</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 								</tbody>
@@ -431,25 +447,25 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>22</div>
+					<div class='panel-lead'>26</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Ara 4, 2023 09:35:36 ÖÖ</div>
+					<div class='panel-lead'>Dez. 27, 2023 02:08:24 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Ara 4, 2023 09:36:24 ÖÖ</div>
+			 		<div class='panel-lead'>Dez. 27, 2023 02:09:29 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>00 00 48.267</div>
+					<div class='panel-lead'>00 01 05.063</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -499,8 +515,8 @@
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
-				grandChildCount: 22,
-				passGrandChild: 22,
+				grandChildCount: 26,
+				passGrandChild: 26,
 				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
@@ -512,7 +528,7 @@
 		
 		<script>
 			var timeline = {
-			        "KPRNTB-136 Verbesserte Suchgenauigkeit":47.111
+			        "KPRNTB-139 Erweiterung Suchkategorie":64.217
 			};
 		</script>
 		

@@ -1,6 +1,6 @@
 Feature: KPRNTB-136 Verbesserte Suchgenauigkeit
 
-  @wip
+
   Scenario: (Automation)Verbesserte keine Suchgenauigkeit
     Given ich gehe die Webseite Amazon-Homepage amazon.de
     Then ich sehe title Amazon.de

@@ -1,13 +1,13 @@
 Feature: KPRNTB-139 Erweiterung Suchkategorie
 
-
+  @wip
   Scenario: (Automation) Die Funktionalität der Kategorie "Bücher"
     Given ich gehe auf die Webseite Amazon-Homepage amazon.de
     Then Ich sehe den Titel auf Amazon.de.
     And ich klicke auf Cookies akzeptieren
     Then ich sehe den Text Alle, oben links auf der Seite, unter amazon.de Logo
     And ich klicke auf den Text Alle
-    Then ich sehe die Kategorienlist
+    Then ich sehe den Titel Alle Kategorien
     And ich sehe auf die Kategorie Bücher in der List
     Then ich klicke auf die Kategorie Bücher in der List
     And ich sehe Alle Bücher Title
@@ -18,7 +18,7 @@ Feature: KPRNTB-139 Erweiterung Suchkategorie
     And ich klicke in der sich öffnenden Kategorienliste auf die erste Kategorie
     Then ich sehe die Sprache Text in der Liste links auf der Seite
     And ich klicke auf Deutsch Checkbox
-    Then ich sehe oben links auf der Seite Seitenzahl der Seiten mehr als Ergebnissen
+    Then ich sehe oben links auf der Seite Seitenzahl der Seiten von mehr als Ergebnissen
     And ich sehe die Ergebnisse Title auf der Seite
     Then ich sehe unter Format Text in der Liste links auf der Seite
     And ich klicke Hörbuch Checkbox

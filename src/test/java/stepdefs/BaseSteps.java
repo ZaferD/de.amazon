@@ -106,8 +106,9 @@ public class BaseSteps {
         return By.xpath(String.format(locator, text));
     }
 
-    public void waitForVisibility(WebElement element) {
+    public WebElement waitForVisibility(WebElement element) {
         wait.until(ExpectedConditions.visibilityOf(element));
+        return element;
     }
 
     public void waitForVisibility(By locator) {
