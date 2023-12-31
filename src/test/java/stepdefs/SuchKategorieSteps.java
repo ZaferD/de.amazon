@@ -41,7 +41,7 @@ public class SuchKategorieSteps extends BaseSteps {
     @And("ich klicke auf den Text Alle")
     public void ichKlickeAufDenTextAlle() {
         click(suchKategoriePage.menuAlle);
-        Utilities.sleep(3000);
+        //Utilities.sleep(3000);
     }
 
     @Then("ich sehe den Titel Alle Kategorien")
@@ -54,13 +54,13 @@ public class SuchKategorieSteps extends BaseSteps {
     public void ichSeheAufDieKategorieBücherInDerList() {
         waitForVisibility(suchKategoriePage.menuBuecher);
         Assert.assertTrue(suchKategoriePage.menuBuecher.getText().contains("Bücher"));
-        Utilities.sleep(3000);
+        //Utilities.sleep(3000);
     }
 
     @Then("ich klicke auf die Kategorie Bücher in der List")
     public void ichKlickeAufDieKategorieBücherInDerList() {
         click(suchKategoriePage.menuBuecher);
-        Utilities.sleep(3000);
+        //Utilities.sleep(3000);
     }
 
     @And("ich sehe Alle Bücher Title")
@@ -72,7 +72,7 @@ public class SuchKategorieSteps extends BaseSteps {
     @Then("ich klicke auf Alle Bücher Text")
     public void ichKlickeAufAlleBücherText() {
         click(suchKategoriePage.menuAlleBuecher);
-        Utilities.sleep(3000);
+        //Utilities.sleep(3000);
     }
 
     @And("ich sehe die Liste der Kategorien unter dem Titel Stöbern links auf der Seite")
@@ -101,7 +101,7 @@ public class SuchKategorieSteps extends BaseSteps {
                 .scrollToElement(waitForVisibility(suchKategoriePage.listErsteVorgestellteKategorien))
                 .click(suchKategoriePage.listErsteVorgestellteKategorien)
                 .perform();
-        Utilities.sleep(3000);
+        //Utilities.sleep(3000);
     }
 
     @Then("ich sehe die Sprache Text in der Liste links auf der Seite")
@@ -112,7 +112,7 @@ public class SuchKategorieSteps extends BaseSteps {
                 .scrollToElement(waitForVisibility(suchKategoriePage.titleSprache))
                 .perform();
         Assert.assertTrue(suchKategoriePage.titleSprache.getText().contains("Sprache"));
-        Utilities.sleep(3000);
+        //Utilities.sleep(3000);
     }
 
     @And("ich klicke auf Deutsch Checkbox")
@@ -122,7 +122,7 @@ public class SuchKategorieSteps extends BaseSteps {
                 .click(suchKategoriePage.checkboxDeutsch)
                 .perform();
 
-        Utilities.sleep(3000);
+        //Utilities.sleep(3000);
     }
 
     @And("ich sehe die Ergebnisse Title auf der Seite")
@@ -131,7 +131,7 @@ public class SuchKategorieSteps extends BaseSteps {
                 .scrollToElement(waitForVisibility(suchKategoriePage.titleErgebnisse))
                 .perform();
         Assert.assertTrue(suchKategoriePage.titleErgebnisse.getText().contains("Ergebnisse"));
-        Utilities.sleep(3000);
+        //Utilities.sleep(3000);
     }
 
     @Then("ich sehe unter Format Text in der Liste links auf der Seite")
@@ -141,13 +141,13 @@ public class SuchKategorieSteps extends BaseSteps {
                 .scrollToElement(waitForVisibility(suchKategoriePage.titleFormat))
                 .perform();
         Assert.assertTrue(suchKategoriePage.titleFormat.getText().contains("Format"));
-        Utilities.sleep(3000);
+        //Utilities.sleep(3000);
     }
 
     @And("ich klicke Hörbuch Checkbox")
     public void ichKlickeHörbuchCheckbox() {
         click(suchKategoriePage.checkboxHoerbuch);
-        Utilities.sleep(3000);
+        //Utilities.sleep(3000);
     }
 
     @Then("ich sehe oben links auf der Seite Seitenzahl der Seiten von mehr als Ergebnissen")
@@ -157,7 +157,7 @@ public class SuchKategorieSteps extends BaseSteps {
                 .perform();
         waitForVisibility(suchKategoriePage.ergebnisBar);
         Assert.assertTrue(suchKategoriePage.ergebnisBar.getText().contains("Ergebnisse"));
-        Utilities.sleep(3000);
+        //Utilities.sleep(3000);
     }
 
     @Then("ich sehe unter der Kundenrezensionen Text in der Liste links auf der Seite")
@@ -165,7 +165,7 @@ public class SuchKategorieSteps extends BaseSteps {
         waitForVisibility(suchKategoriePage.titleKundenrezensionen);
         //System.out.println(suchKategoriePage.titleKundenrezensionen.getText());
         Assert.assertEquals(suchKategoriePage.titleKundenrezensionen.getText(),"Kundenrezensionen");
-        Utilities.sleep(3000);
+        //Utilities.sleep(3000);
     }
 
     @And("ich klicke vier Sterne & mehr")
