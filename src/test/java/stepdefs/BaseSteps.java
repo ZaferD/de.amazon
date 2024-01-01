@@ -48,6 +48,12 @@ public class BaseSteps {
 
     }
 
+    public void sendKeys(String text){
+        new Actions(driver)
+                .sendKeys(text)
+                .pause(2000)
+                .perform();
+    }
     public void sendKeys(By locator, String text){
         WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(locator));
         sendKeys(element, text);

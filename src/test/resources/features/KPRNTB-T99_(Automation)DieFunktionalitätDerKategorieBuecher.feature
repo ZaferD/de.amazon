@@ -8,8 +8,8 @@ Feature: KPRNTB-139 Erweiterung Suchkategorie
     Then ich sehe den Text Alle, oben links auf der Seite, unter amazon.de Logo
     And ich klicke auf den Text Alle
     Then ich sehe den Titel Alle Kategorien
-    And ich sehe auf die Kategorie Bücher in der List
-    Then ich klicke auf die Kategorie Bücher in der List
+    And ich sehe den Title Bücher unter dem Titel Alle Kategorien
+    Then ich klicke auf den Title Bücher in der List
     And ich sehe Alle Bücher Title
     Then ich klicke auf Alle Bücher Text
     And ich sehe die Liste der Kategorien unter dem Titel Stöbern links auf der Seite
@@ -21,7 +21,7 @@ Feature: KPRNTB-139 Erweiterung Suchkategorie
     Then ich sehe oben links auf der Seite Seitenzahl der Seiten von mehr als Ergebnissen
     And ich sehe die Ergebnisse Title auf der Seite
     Then ich sehe unter Format Text in der Liste links auf der Seite
-    And ich klicke Hörbuch Checkbox
+    And ich klicke Taschenbuch Checkbox
     Then ich sehe oben links auf der Seite Seitenzahl der Seiten von mehr als Ergebnissen
     And ich sehe die Ergebnisse Title auf der Seite
     Then ich sehe unter der Kundenrezensionen Text in der Liste links auf der Seite

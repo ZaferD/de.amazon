@@ -42,8 +42,8 @@ public class SuchKategoriePage {
     public WebElement titleErgebnisse;
     @FindBy(xpath = "//span[@class='a-size-base a-color-base puis-bold-weight-text' and text()='Format']")
     public WebElement titleFormat;
-    @FindBy(xpath = "//*[@aria-label='Hörbuch']/span/a/div/label/input")
-    public WebElement checkboxHoerbuch;
+    @FindBy(xpath = "//li[@aria-label='Taschenbuch']//input[@type='checkbox']")
+    public WebElement checkboxTaschenbuch;
     @FindBy(xpath = "//span[@class='a-size-base a-color-base puis-bold-weight-text' and text()='Kundenrezensionen']")
     public WebElement titleKundenrezensionen;
     @FindBy(xpath = "//section[@aria-label='4 Sterne und mehr']")
