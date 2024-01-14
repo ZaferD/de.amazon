@@ -29,7 +29,8 @@ public class SuchKategoriePage {
     public WebElement titleVorgestellteKategorien;
     @FindBy(xpath = "//li[@class='octopus-pc-category-card-v2-item'][1]")
     public WebElement ersteVorgestellteKategorien;
-    @FindBy(xpath = "//span[@class='a-size-base a-color-base' and text()='Vegetarische & vegane Küche']")
+    @FindBy(xpath = "//span[@class='a-size-base a-color-base'][1]")
+    //@FindBy(xpath = "//span[@class='a-size-base a-color-base' and text()='Kochen nach Ländern']")
     //@FindBy(xpath = "(//div[@class='a-section octopus-pc-category-card-v2-subcategory-title'])[1]")
     public WebElement listErsteVorgestellteKategorien;
     @FindBy(xpath = "//span[@class='a-size-base a-color-base a-text-bold' and text()='Sprache']")

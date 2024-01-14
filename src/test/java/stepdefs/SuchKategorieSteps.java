@@ -134,6 +134,7 @@ public class SuchKategorieSteps extends BaseSteps {
         click(suchKategoriePage.checkboxTaschenbuch);
         //Utilities.sleep(3000);
     }
+
     @Then("ich sehe oben links auf der Seite Seitenzahl der Seiten von mehr als Ergebnissen")
     public void ichSeheObenLinksAufDerSeiteSeitenzahlDerSeitenVonMehrAlsErgebnissen() {
         sendKeys("Keys.HOME");
