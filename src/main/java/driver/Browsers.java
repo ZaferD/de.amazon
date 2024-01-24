@@ -1,6 +1,6 @@
 package driver;
 
-public enum Browsers {
+public enum  Browsers {
     CHROME,
     EDGE,
     SAFARI,

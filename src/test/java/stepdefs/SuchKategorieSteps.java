@@ -25,6 +25,7 @@ public class SuchKategorieSteps extends BaseSteps {
     public void ichSeheDenTitelAufAmazonDe() {
         String actualTitle = Driver.getDriver().getTitle();
         Assert.assertTrue(actualTitle.contains("Amazon.de"));
+
     }
 
     @And("ich klicke auf Cookies akzeptieren")
